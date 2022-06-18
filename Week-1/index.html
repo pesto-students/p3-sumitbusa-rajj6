@@ -85,7 +85,16 @@
             margin-left: 10%;
         }
 
-        .las {
+        .side_bar_operation {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            margin-top: 50%;
+            margin-bottom: 50%;
+            flex-direction: column;
+        }
+
+        .side_bar_operation.las {
             margin: auto;
             top: 50%
             
@@ -101,8 +110,15 @@
     <div class="screen">
         <div class="upper_screen">
             <div class="side_bar">
-                <div class="icon">
-                    <p>This is side bar</p>
+                <div class="side_bar_operation">
+                    <i class="las la-bars"></i>
+                    <i class="las la-home"></i>
+                    <i class="las la-search"></i>
+                    <i class="las la-volume-up"></i>
+                    <i class="las la-user"></i>
+                    <!-- <i class="las la-spotify"></i> 1 -->
+                    <i class="las la-cog"></i>
+                    <!-- <i class="las la-soundcloud"></i>1 -->
                 </div>
             </div>
             <div class="album">
