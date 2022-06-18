@@ -32,3 +32,5 @@ The website is open now it depends upon the website and user how they interact w
 
 ## How does browser parses the HTML text into a function webpage:
 One networking layer receives a HTML page data. The rendering engine creates a dom. The website does not waits for completing the page creation process. It starts presenting it on the screen. Every component works in parallel. The java script engine can modify the dom at any point of time and it will visible then and there. The HTML content is processed in form of tree like structure we call it dom(document object model). This dom object will we used by JavaScript engine of modifying the website.
+
+![How does browser works.](how_browser_works.png)
