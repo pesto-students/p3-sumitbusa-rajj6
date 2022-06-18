@@ -52,13 +52,13 @@
             width: 100%;
             height: 60%;
             display: flex;
-            margin-top: 10px;
             flex-direction: column;
         }
 
         .song_column {
-            width: 100%;
+            width: 99%;
             height: 10%;
+            margin-left: 1%;
             display: flex;
         }
 
@@ -137,6 +137,7 @@
         
         i {
             text-align:center;
+            text-align-last: center;
         }
 
         .album_name {
@@ -177,9 +178,9 @@
             text-align: left;
         }
 
-        /* .album_songs :nth-child(2) {
-            background: grey;
-        } */
+        .album_songs > div:nth-child(even) {
+            background: #d0d0d079;
+        }
 
         </style>
         </head>
