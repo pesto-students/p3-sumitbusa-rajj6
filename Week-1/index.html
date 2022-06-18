@@ -30,16 +30,36 @@
             height: 100%;
         }
 
-        div.album_details {
+        div.album
+
+        div.album_header {
             background-color: #2E2E2E;
             width: 100%;
             height: 40%;
+            display: flex;
+        }
+
+        div.album_image {
+            width: 20%;
+            height: 100%;
+        }
+
+        img.album_image {
+            height: 80%;
+            margin: 10%;
         }
 
         div.album_songs {
             background-color: #f0f0f0;
             width: 100%;
             height: 60%;
+        }
+
+        div.album_dec {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         div.lower_screen {
@@ -60,17 +80,19 @@
         }
 
         img.song_image  {
-            height: 100%;
+            margin: 5%;
+            height: 90%;
         }
 
         div.song_detail_3 {
-            height: 100%;
+            height: 90%;
             width: 10%;
         }
 
         div.song_detail_3 > div{
             text-align: center;
             height: 50%;
+            color: white;
         }
 
         i.las {
@@ -83,6 +105,7 @@
             width: 70%;
             display: flex;
             margin-left: 10%;
+            color: white;
         }
 
         .side_bar_operation {
@@ -99,10 +122,48 @@
             top: 50%
             
         }
+        
         i {
             text-align:center;
         }
 
+        .album_name {
+            width: 100%;
+            height: 20%;
+            color: white;
+            font-size: large;
+            padding-top: 20px;
+        }
+
+        .album_details {
+            width: 100%;
+            height: 60%;
+            color: white;
+            font-size: small;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .album_ops {
+            width: 40%;
+            height: 20%;
+            color: white;
+            display: flex;
+        }
+        
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+
+        label {
+            display: flex;
+            word-wrap: normal;
+        }
+
+        label > span {
+            font-size: small;
+            text-align: left;
+        }
 
         </style>
         </head>
@@ -122,12 +183,23 @@
                 </div>
             </div>
             <div class="album">
-                <div class="album_details">
-                    <div class="">
-
+                <div class="album_header">
+                    <div class = "album_image" >
+                        <img class = "album_image", src="https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg" alt="Girl in a jacket">
                     </div>
-                    <div>
-                        
+                    <div class="album_dec">
+                        <div class="album_name">
+                            <strong>CattyBoard Top 100 Single Charts (11.06.36)</strong>
+                        </div>
+                        <div class="album_details">
+                            <div><span>Unknown Artist</span></div>
+                            <div><span>2016. Charls. 100 songs</span></div>
+                        </div>
+                        <div class="album_ops">
+                            <label><i class="las la-play"></i><span>Play All</span></label>
+                            <label><i class="las la-plus"></i><span>Add to</span></label>
+                            <label><i class="las la-ellipsis-h"></i><span>More</span></label>
+                        </div>
                     </div>
                 </div>
                 <div class="album_songs">
@@ -144,26 +216,13 @@
                     <div class="singer_name"><span>Catson Derulo</span></div>
                 </div>
                 <div class="play_list_operation">
-                    <!-- <i class="las la-bars"></i>
-                    <i class="las la-home"></i>
-                    <i class="las la-search"></i>
-                    <i class="las la-volume-up"></i>
-                    <i class="las la-user"></i>
-                    <i class="las la-spotify"></i> 1
-                    <i class="las la-cog"></i>
-                    <i class="las la-soundcloud"></i>1 -->
-
-                    <!-- <i class="las la-play"></i>
-                    <i class="las la-plus"></i>
-                    <i class="las la-ellipsis-h"></i> -->
-
+                    
                     <i class="las la-step-backward"></i>
                     <i class="las la-pause"></i>
                     <i class="las la-step-forward"></i>
                     <i class="las la-undo-alt"></i>
                     <i class="las la-random"></i>
                     
-
                 </div>
             </div>
         </div>
