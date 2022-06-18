@@ -24,13 +24,11 @@
         }
 
         div.album {
-            background-color: rgb(149, 92, 38);
+            background-color: #f0f0f0;
             position: right;
             width: 95%;
             height: 100%;
         }
-
-        div.album
 
         div.album_header {
             background-color: #2E2E2E;
@@ -53,6 +51,20 @@
             background-color: #f0f0f0;
             width: 100%;
             height: 60%;
+            display: flex;
+            margin-top: 10px;
+            flex-direction: column;
+        }
+
+        .song_column {
+            width: 100%;
+            height: 10%;
+            display: flex;
+        }
+
+        .song_column > div {
+            width: 25%;
+            height: 100%;
         }
 
         div.album_dec {
@@ -165,6 +177,10 @@
             text-align: left;
         }
 
+        /* .album_songs :nth-child(2) {
+            background: grey;
+        } */
+
         </style>
         </head>
 <body>
@@ -203,7 +219,30 @@
                     </div>
                 </div>
                 <div class="album_songs">
-        
+                    <div class="song_column">
+                        <div class="song_name"><span>1. One Dance</span></div>
+                        <div class="song_singer"><span>Crake feat Catkid</span></div>
+                        <div class="song_duration"><span>2:54</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>2. Panda</span></div>
+                        <div class="song_singer"><span>Cattee</span></div>
+                        <div class="song_duration"><span>4:06</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>3. Can't stop the fellings!</span></div>
+                        <div class="song_singer"><span>Catin Cimberlake</span></div>
+                        <div class="song_duration"><span>3:56</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>4. Work From Home</span></div>
+                        <div class="song_singer"><span>Cat Harmony feat Colla</span></div>
+                        <div class="song_duration"><span>3:34</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
                 </div>
             </div>
         </div>
