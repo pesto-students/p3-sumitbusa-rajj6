@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
         <style>
         body {background-color: whitesmoke;}
 
@@ -51,11 +52,49 @@
             float: left;
             width: 100%;
             height: 100%;
+            display: flex;
         }
-        div.song_detail_2 img {
-            margin:auto;
-            height: 90%;
+        div.song_image  {
+            height: 100%;
+            width: 10%;
         }
+
+        img.song_image  {
+            height: 100%;
+        }
+
+        div.song_detail_3 {
+            height: 100%;
+            width: 10%;
+        }
+
+        div.song_detail_3 > div{
+            text-align: center;
+            height: 50%;
+        }
+
+        i.las {
+            height: 100%;
+            width: 100%;
+        }
+
+        .play_list_operation {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            margin-left: 10%;
+        }
+
+        .las {
+            margin: auto;
+            top: 50%
+            
+        }
+        i {
+            text-align:center;
+        }
+
+
         </style>
         </head>
 <body>
@@ -68,7 +107,12 @@
             </div>
             <div class="album">
                 <div class="album_details">
-        
+                    <div class="">
+
+                    </div>
+                    <div>
+                        
+                    </div>
                 </div>
                 <div class="album_songs">
         
@@ -78,9 +122,33 @@
         
         <div class="lower_screen">
             <div class="song_detail_2">
-                <img src="https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg" alt="Girl in a jacket">
-                <span>If It Ain't love</span>
-                <span>Catson Derulo</span>
+                <div class = "song_image" ><img class = "song_image", src="https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg" alt="Girl in a jacket"></div>
+                <div class="song_detail_3">
+                    <div class="song_name"><span>If It Ain't love</span></div>
+                    <div class="singer_name"><span>Catson Derulo</span></div>
+                </div>
+                <div class="play_list_operation">
+                    <!-- <i class="las la-bars"></i>
+                    <i class="las la-home"></i>
+                    <i class="las la-search"></i>
+                    <i class="las la-volume-up"></i>
+                    <i class="las la-user"></i>
+                    <i class="las la-spotify"></i> 1
+                    <i class="las la-cog"></i>
+                    <i class="las la-soundcloud"></i>1 -->
+
+                    <!-- <i class="las la-play"></i>
+                    <i class="las la-plus"></i>
+                    <i class="las la-ellipsis-h"></i> -->
+
+                    <i class="las la-step-backward"></i>
+                    <i class="las la-pause"></i>
+                    <i class="las la-step-forward"></i>
+                    <i class="las la-undo-alt"></i>
+                    <i class="las la-random"></i>
+                    
+
+                </div>
             </div>
         </div>
     </div>
