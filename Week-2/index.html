@@ -80,14 +80,60 @@
             </article>
         </article>
         <div class="form">
-            <form>
-                
+            <form action="" method="get" class="sample-form">
+                <div sample-form-element>
+                    <input type="radio" name="title" value="mr" id="mr">
+                    <label for="mr">Mr.</label>
+                    <input type="radio" name="title" value="mrs" id="mrs">
+                    <label for="mrs">Mrs.</label>
+                    <input type="radio" name="title" value="ms" id="ms">
+                    <label for="ms">Ms.</label>
+                </div>
+                <div sample-form-element>
+                    <label for="firstname">Enter your First name: </label>
+                    <input type="text" name="firstname" id="firstname" required>
+                </div>
+                <div sample-form-element>
+                    <label for="lastname">Enter your Last name: </label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+                <div sample-form-element>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div sample-form-element>
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </div>
+                <div sample-form-element>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div sample-form-element>
+                    <label for="password">Confirm your Password:</label>
+                    <input type="password" name="cpassword" id="cpassword">
+                </div>
+                <div sample-form-element>
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="">--Please choose an option--</option>
+                        <option value="India">India</option>
+                        <option value="Ingland">Ingland</option>
+                        <option value="China">China</option>
+                        <option value="Turky">Turky</option>
+                        <option value="Maldvies">Maldvies</option>
+                        <option value="Singapore">Singapore</option>
+                    </select>
+                </div>
+                <div sample-form-element>
+                    <p><input type="checkbox" id="agree" name="agree">I agree to the <a href="#">terms and condition</a></p>
+                </div>
+                <button type="submit">Sign up</button>
             </form>
         </div>
         <div class="footer">
             <footer>
                 <p>All rights reserved.<a href="#">Click here!</a></p>
-                
             </footer>
         </div>
 </body>

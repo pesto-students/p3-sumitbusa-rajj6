@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: azure;
 }
 
 .body {
@@ -47,4 +48,12 @@ article {
     bottom: 0;
     width: 100%;
     background-color: lightgray;
+}
+
+button:hover, button:focus {
+    background-color: aqua;
+}
+
+button:active{
+    background:red;
 }
