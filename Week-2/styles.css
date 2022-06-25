@@ -62,3 +62,27 @@ button:hover, button:focus {
 button:active{
     background:red;
 }
+
+.form {
+    border-top: solid;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.sample-form {
+    display: table;
+}
+
+.sample-form-element {
+    display: table-row;
+}
+
+.sample-form-element>label, .sample-form-element>input, .select-label {
+    display: table-cell;
+}
+
+.sample-form-element>button {
+    align-items: center;
+}

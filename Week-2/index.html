@@ -81,39 +81,42 @@
         </article>
         <div class="form">
             <form action="" method="get" class="sample-form">
-                <div sample-form-element>
+                <div class="sample-form-element">
+                    <p class="select-label">Title:</p>
+                    <div>
                     <input type="radio" name="title" value="mr" id="mr">
                     <label for="mr">Mr.</label>
                     <input type="radio" name="title" value="mrs" id="mrs">
                     <label for="mrs">Mrs.</label>
                     <input type="radio" name="title" value="ms" id="ms">
                     <label for="ms">Ms.</label>
+                    </div>
                 </div>
-                <div sample-form-element>
-                    <label for="firstname">Enter your First name: </label>
+                <div class="sample-form-element">
+                    <label for="firstname">First name</label>
                     <input type="text" name="firstname" id="firstname" required>
                 </div>
-                <div sample-form-element>
-                    <label for="lastname">Enter your Last name: </label>
+                <div class="sample-form-element">
+                    <label for="lastname">Last name</label>
                     <input type="text" name="lastname" id="lastname">
                 </div>
-                <div sample-form-element>
-                    <label for="email">Email:</label>
+                <div class="sample-form-element">
+                    <label for="email">Email</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div sample-form-element>
-                    <label for="phone">Phone number:</label>
+                <div class="sample-form-element">
+                    <label for="phone">Phone number</label>
                     <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </div>
-                <div sample-form-element>
-                    <label for="password">Password:</label>
+                <div class="sample-form-element">
+                    <label for="password">Password</label>
                     <input type="password" name="password" id="password">
                 </div>
-                <div sample-form-element>
-                    <label for="password">Confirm your Password:</label>
+                <div class="sample-form-element">
+                    <label for="password">Confirm your Password</label>
                     <input type="password" name="cpassword" id="cpassword">
                 </div>
-                <div sample-form-element>
+                <div class="sample-form-element">
                     <label for="country">Country</label>
                     <select name="country" id="country">
                         <option value="">--Please choose an option--</option>
@@ -125,10 +128,12 @@
                         <option value="Singapore">Singapore</option>
                     </select>
                 </div>
-                <div sample-form-element>
+                <div class="sample-form-element">
                     <p><input type="checkbox" id="agree" name="agree">I agree to the <a href="#">terms and condition</a></p>
                 </div>
-                <button type="submit">Sign up</button>
+                <div class="sample-form-element">
+                    <button type="submit">Sign up</button>
+                </div>
             </form>
         </div>
         <div class="footer">
