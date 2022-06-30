@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    align-items: center;
+}
+
+header>h1 {
+    align-items: center;
+}
+
+.articles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid;
+    justify-content: center;
+}
+
+article {
+    width: 48%;
+    height: auto;
+    margin: 1%;
+}
+
+article > p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 800px) {
+    article {
+        width: 100%;
+    }
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+}
+
+button:hover, button:focus {
+    background-color: aqua;
+}
+
+button:active{
+    background:red;
+}
+
+.form {
+    border-top: solid;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.sample-form {
+    display: table;
+}
+
+.sample-form-element {
+    display: table-row;
+}
+
+.sample-form-element>label, .sample-form-element>input, .select-label {
+    display: table-cell;
+}
+
+.sample-form-element>button {
+    align-items: center;
+}
