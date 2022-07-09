@@ -23,32 +23,11 @@ Outcome:
     4.  Error handling using functions.
 */
 
-// Function for generating a Random number (from 1 to 100)
 function getNumber() {
     return Math.ceil(Math.random() * 100);
 }
 
-// getNumberAfter = (ms) => new Promise((resolve, reject) => {
-//     let randomNumber = getNumber();
-//     if (randomNumber % 5 !== 0) {
-//         return setTimeout(() => { resolve(randomNumber) }, ms);
-
-//     } else {
-//         return setTimeout(() => { reject(new Error('Num is divisible by 5')) }, ms);
-//     }
-// });
-
-class MyPromise {
-    constructor(callback) {
-        try {
-            callback(this.onSuccess, this.onFail)
-        } catch (error) {
-            this.onFail(e)
-        }
-    }
-}
-
-getNumberAfter = (ms) => new MyPromise((resolve, reject) => {
+getNumberAfter = (ms) => new Promise((resolve, reject) => {
     let randomNumber = getNumber();
     if (randomNumber % 5 !== 0) {
         return setTimeout(() => { resolve(randomNumber) }, ms);
