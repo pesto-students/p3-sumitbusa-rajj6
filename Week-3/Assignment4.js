@@ -25,7 +25,7 @@ function createStack() {
             items.push(item);
             console.log('now the stack is :' + items)
         },
-        pop() {
+        pop() { 
             return items.pop();
         }
     };
