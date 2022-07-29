@@ -142,19 +142,6 @@ class SinglyLinkedList {
         if (index === this.size) {
             this.push(value);
         }
-        
-        /*
-        My logic
-        let counter = 0;
-        let prevNode = this.head;
-        while(counter < index-1) {
-            prevNode = prevNode.next;
-            counter++;
-        }
-        newNode.next = prevNode.next;
-        prevNode.next = newNode;
-        this.size++;
-        */
 
         let prev = this.getNode(index-1);
         let newNode = new Node(value);
