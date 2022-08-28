@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <style>
+        body {
+            background-color: whitesmoke;
+        }
+        .screen {
+            width: 100vw;
+            height: 100vh;
+        }
+        .upper_screen {
+            background-color: rgb(231, 231, 222);
+            position: relative;
+            width: inherit;
+            height: 85%;
+            display: flex;
+        }
+        .side_bar {
+            background-color: #D0D0D0;
+            position: relative;
+            width: 5%;
+            height: 100%;
+        }
+        .album {
+            background-color: #f0f0f0;
+            position: right;
+            width: 95%;
+            height: 100%;
+        }
+        .album_header {
+            background-color: #2E2E2E;
+            width: 100%;
+            height: 40%;
+            display: flex;
+        }
+        div.album_image {
+            width: 20%;
+            height: 100%;
+        }
+        img.album_image {
+            height: 80%;
+            margin: 10%;
+        }
+        .album_songs {
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+        .song_column {
+            width: 99%;
+            height: 10%;
+            margin-left: 1%;
+            display: flex;
+        }
+        .song_column > div {
+            width: 25%;
+            height: 100%;
+            padding: .8em;
+        }
+        .album_dec {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .lower_screen {
+            background-color: rgb(28, 71, 128);
+            position: relative;
+            width: inherit;
+            height: 15%;
+        }
+        .song_detail_2 {
+            float: left;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        div.song_image  {
+            height: 100%;
+            width: 10%;
+        }
+        img.song_image  {
+            margin: 5%;
+            height: 90%;
+        }
+        .song_detail_3 {
+            height: 90%;
+            width: 10%;
+        }
+        .song_detail_3 > div{
+            text-align: center;
+            height: 50%;
+            color: white;
+            padding-top: 1em;
+        }
+        i.las {
+            height: 100%;
+            width: 100%;
+        }
+        .play_list_operation {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            margin-left: 10%;
+            color: white;
+        }
+        .play_list_operation > i {
+            padding-top: 3.5em;
+        }
+        .side_bar_operation {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            margin-top: 50%;
+            margin-bottom: 50%;
+            flex-direction: column;
+        }
+        .side_bar_operation.las {
+            margin: auto;
+            top: 50%
+        }
+        i {
+            text-align:center;
+            text-align-last: center;
+        }
+        .album_name {
+            width: 100%;
+            height: 20%;
+            color: white;
+            font-size: large;
+            padding-top: 20px;
+        }
+        .album_details {
+            width: 100%;
+            height: 60%;
+            color: white;
+            font-size: small;
+            display: flex;
+            flex-direction: column;
+        }
+        .album_ops {
+            width: 40%;
+            height: 20%;
+            color: white;
+            display: flex;
+        }
+        * {
+            font-family: 'Lato', sans-serif;
+        }
+        label {
+            display: flex;
+            word-wrap: normal;
+        }
+        label > span {
+            font-size: small;
+            text-align: left;
+        }
+        .album_songs > div:nth-child(even) {
+            background: #d0d0d079;
+        }
+        </style>
+        </head>
+<body>
+    <div class="screen">
+        <div class="upper_screen">
+            <div class="side_bar">
+                <div class="side_bar_operation">
+                    <i class="las la-bars"></i>
+                    <i class="las la-home"></i>
+                    <i class="las la-search"></i>
+                    <i class="las la-volume-up"></i>
+                    <i class="las la-user"></i>
+                    <i class="las la-cog"></i>
+                </div>
+            </div>
+            <div class="album">
+                <div class="album_header">
+                    <div class = "album_image">
+                        <img class = "album_image" src="https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg" alt="Girl in a jacket">
+                    </div>
+                    <div class="album_dec">
+                        <div class="album_name">
+                            <strong>CattyBoard Top 100 Single Charts (11.06.36)</strong>
+                        </div>
+                        <div class="album_details">
+                            <span>Unknown Artist</span>
+                            <span>2016. Charls. 100 songs</span>
+                        </div>
+                        <div class="album_ops">
+                            <label><i class="las la-play"></i><span>Play All</span></label>
+                            <label><i class="las la-plus"></i><span>Add to</span></label>
+                            <label><i class="las la-ellipsis-h"></i><span>More</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="album_songs">
+                    <div class="song_column">
+                        <div class="song_name"><span>1. One Dance</span></div>
+                        <div class="song_singer"><span>Crake feat Catkid</span></div>
+                        <div class="song_duration"><span>2:54</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>2. Panda</span></div>
+                        <div class="song_singer"><span>Cattee</span></div>
+                        <div class="song_duration"><span>4:06</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>3. Can't stop the fellings!</span></div>
+                        <div class="song_singer"><span>Catin Cimberlake</span></div>
+                        <div class="song_duration"><span>3:56</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                    <div class="song_column">
+                        <div class="song_name"><span>4. Work From Home</span></div>
+                        <div class="song_singer"><span>Cat Harmony feat Colla</span></div>
+                        <div class="song_duration"><span>3:34</span></div>
+                        <div class="song_link"><a href="google.com">CATTY CLOUD SYNC</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower_screen">
+            <div class="song_detail_2">
+                <div class = "song_image" ><img class = "song_image", src="https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg" alt="Girl in a jacket"></div>
+                <div class="song_detail_3">
+                    <div class="song_name"><span>If It Ain't love</span></div>
+                    <div class="singer_name"><span>Catson Derulo</span></div>
+                </div>
+                <div class="play_list_operation">
+                    <i class="las la-step-backward"></i>
+                    <i class="las la-pause"></i>
+                    <i class="las la-step-forward"></i>
+                    <i class="las la-undo-alt"></i>
+                    <i class="las la-random"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
