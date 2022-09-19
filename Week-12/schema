@@ -1,0 +1,130 @@
+drop database practice;
+create database practice;
+use practice;
+
+CREATE TABLE cities (
+	city_id int primary key,
+	city_name varChar(20) NOT NULL,
+	state varChar(20) NOT NULL
+);
+
+INSERT INTO cities VALUES (1, 'Varanasi', 'UP');
+INSERT INTO cities VALUES (2, 'Lucknow', 'UP');
+
+CREATE TABLE WAREHOUSES(
+	warehouse_id int primary key,
+	warehouse_name varchar(20) not null,
+	location varchar(20) not null,
+	extra_contex JSON
+);
+
+INSERT INTO WAREHOUSES VALUES (1, 'medha', 'Varanasi', '{"area": "10k"}');
+INSERT INTO WAREHOUSES VALUES (2, 'hrijusha', 'Lucknow', '{"area": "10k"}');
+INSERT INTO WAREHOUSES VALUES (3, 'raj', 'Lucknow', '{"area": "10k"}');
+INSERT INTO WAREHOUSES VALUES (4, 'himanshu', 'Lucknow', '{"area": "10k"}');
+INSERT INTO WAREHOUSES VALUES (5, 'kumara', 'Lucknow', '{"area": "10k"}');
+
+
+CREATE TABLE STORES(
+	store_id int primary key,
+	store_name varchar(20) not null,
+	location_city varchar(20) not null,
+	warehouse_id int
+);
+
+drop table stores;
+
+CREATE TABLE STORES(
+	store_id int primary key,
+	store_name varchar(20) not null,
+	location_city varchar(20) not null,
+	warehouse_id int,
+	CONSTRAIN FK_STORES FOREIGN KEY (warehouse_id) REFERENCES WAREHOUSES(warehouse_id)
+);
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FK_STORES FOREIGN KEY (warehouse_id) REFERENCES WAREHOUSES(warehouse_id)
+)' at line 6
+
+CREATE TABLE STORES(
+	store_id int primary key,
+	store_name varchar(20) not null,
+	location_city varchar(20) not null,
+	warehouse_id int,
+	FOREIGN KEY (warehouse_id) REFERENCES WAREHOUSES(warehouse_id)
+);
+
+INSERT INTO STORES VALUES (1, 'store_1', 'Varanasi', 1);
+INSERT INTO STORES VALUES (2, 'store_2', 'Varanasi', 1);
+INSERT INTO STORES VALUES (3, 'store_3', 'Varanasi', 1);
+INSERT INTO STORES VALUES (4, 'store_4', 'Varanasi', 1);
+INSERT INTO STORES VALUES (5, 'store_5', 'Lucknow', 2);
+INSERT INTO STORES VALUES (6, 'store_6', 'Lucknow', 3);
+INSERT INTO STORES VALUES (7, 'store_7', 'Lucknow', 3);
+INSERT INTO STORES VALUES (8, 'store_8', 'Lucknow', 5);
+
+CREATE TABLE CUSTOMERS(
+	customer_id int primary key,
+	customer_name varchar(20) not null,
+	address varchar(50),
+	cu_city varchar(20)
+);
+
+INSERT INTO CUSTOMERS VALUES (1, 'NAME 1', 'address 1, line 2, state 3', 'Varanasi');
+INSERT INTO CUSTOMERS VALUES (2, 'NAME 2', 'address 1, line 2, state 3', 'Varanasi');
+INSERT INTO CUSTOMERS VALUES (3, 'NAME 3', 'address 1, line 2, state 3', 'Varanasi');
+INSERT INTO CUSTOMERS VALUES (4, 'NAME 4', 'address 1, line 2, state 3', 'Varanasi');
+INSERT INTO CUSTOMERS VALUES (5, 'NAME 5', 'address 1, line 2, state 3', 'Lucknow');
+INSERT INTO CUSTOMERS VALUES (6, 'NAME 6', 'address 1, line 2, state 3', 'Lucknow');
+INSERT INTO CUSTOMERS VALUES (7, 'NAME 7', 'address 1, line 2, state 3', 'Lucknow');
+
+
+CREATE TABLE ITEMS(
+	item_id int primary key,
+	description text not null,
+	weight decimal(5,2),
+	cost decimal(5,2),
+	store_id int,
+	CONSTRAINT FK_ITEMS FOREIGN KEY (store_id) REFERENCES STORES(store_id)
+);
+
+INSERT INTO ITEMS VALUES (1, 'item 1', 3.5, 10.5, 1);
+INSERT INTO ITEMS VALUES (2, 'item 2', 3.55, 20, 1);
+INSERT INTO ITEMS VALUES (3, 'item 3', 4.5, 30, 1);
+INSERT INTO ITEMS VALUES (4, 'item 4', 1.5, 40, 1);
+INSERT INTO ITEMS VALUES (5, 'item 5', 2.5, 50, 1);
+
+CREATE TABLE ORDERS(
+	order_id int primary key,
+	order_date DATE not null,
+	customer_id int,
+	CONSTRAINT FK_ORDERS FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
+);
+
+INSERT INTO ORDERS VALUES (1, '2022-09-01', 1);
+INSERT INTO ORDERS VALUES (5, '2022-09-03', 1);
+INSERT INTO ORDERS VALUES (2, '2022-09-01', 1);
+INSERT INTO ORDERS VALUES (3, '2022-09-01', 2);
+INSERT INTO ORDERS VALUES (4, '2022-09-01', 3);
+
+
+CREATE TABLE ORDER_ITEMS(
+	order_id INT NOT NULL,
+	item_id INT NOT NULL,
+	quantity INT NOT NULL,
+	INDEX(order_id, item_id),
+	FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
+	FOREIGN KEY (item_id) REFERENCES ITEMS(item_id),
+	UNIQUE(order_id, item_id)
+);
+
+INSERT INTO ORDER_ITEMS VALUES (1, 1, 2);
+INSERT INTO ORDER_ITEMS VALUES (1, 2, 1);
+INSERT INTO ORDER_ITEMS VALUES (2, 2, 1);
+INSERT INTO ORDER_ITEMS VALUES (2, 1, 3);
+INSERT INTO ORDER_ITEMS VALUES (1, 3, 4);
+INSERT INTO ORDER_ITEMS VALUES (1, 4, 5);
+INSERT INTO ORDER_ITEMS VALUES (2, 4, 5);
+INSERT INTO ORDER_ITEMS VALUES (3, 5, 1);
+INSERT INTO ORDER_ITEMS VALUES (3, 1, 2);
+INSERT INTO ORDER_ITEMS VALUES (4, 2, 1);
+INSERT INTO ORDER_ITEMS VALUES (3, 2, 1);
